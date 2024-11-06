@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Structure</title>
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container, .do_container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1100px;
+            width: 100%;
+            margin-bottom: 20px; /* Space between the two containers */
+        }
+
+        .do_container {
+            max-width: 1200px;
+
+        }
+
+        .column, .docolumn {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h2, .docolumn h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .column p, .docolumn p {
+            margin-bottom: 8px;
+        }
+
+        .docolumn h2 {
+            color: #007bff;
+        }
+
+        .docolumn h2.dos {
+            color: #32cd32;
+        }
+
+        .box {
+            background-color: #007bff; /* Blue background */
+            color: #ffffff; /* White text */
+            border-radius: 8px;
+            padding: 10px; /* Increased padding for a larger box */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            font-size: 1.5rem;
+        }
+
+        .boxcontainer {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 300px;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .box a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            /* Make Do's and Don’ts appear side by side */
+            .do_container {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Column 1: Resume Structure Points -->
+        <div class="column">
+            <h2 align="center">Resume Structure</h2><br>
+            <p><strong>1. Name</strong></p>
+            <p>Include your name</p>
+            <br>
+            <p><strong>2. Contact Information</strong></p>
+            <p>Include your name, phone number, email address, and LinkedIn profile.</p>
+            <br>
+            <p><strong>3. Summary or Objective (Optional)</strong></p>
+            <p>A brief statement summarizing your skills and career goals.</p>
+            <br>
+            <p><strong>4. Education</strong></p>
+            <p>Include your degrees, school names, and graduation dates.</p>
+            <br>
+            <p><strong>5. Work Experience</strong></p>
+            <p>List your most recent internship. Include title, company name, dates, and key responsibilities.</p>
+            <br>
+            <p><strong>6. Skills</strong></p>
+            <p>List relevant skills tailored to the job you're applying for.</p>
+            <br>
+            <p><strong>7. Projects</strong></p>
+            <p>List your projects, including title, dates, and key responsibilities.</p>
+            <br>
+            <p><strong>8. Certifications & Achievements</strong></p>
+            <p>Include any certifications or notable achievements relevant to the position.</p>
+        </div>
+
+        <!-- Column 2: Supporting Image -->
+        <div class="column">
+            <h2 align="center">Supporting Image</h2>
+            <img src="placwement_page-0001.jpg" alt="Supporting Image" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+    <br>
+    <h1>Do’s and Don’ts </h1>
+    <br>
+
+    <!-- Do and Don’t Container Below the Resume Structure Container -->
+    <div class="do_container">
+        <div class="docolumn">
+            <h2 style="color: #ff6347;">Don’ts</h2>
+            <p><strong>1. No Declaration</strong></p>
+            <p>Avoid adding unnecessary declarations or statements at the end.</p>
+            <p><strong>2. No Fancy Colors</strong></p>
+            <p>Stick to professional colors. Avoid bright or overly decorative fonts and colors.</p>
+            <p><strong>3. No "Languages Known" Section</strong></p>
+            <p>Unless directly relevant to the job, avoid listing basic language proficiencies.</p>
+            <p><strong>4. No Paragraphs</strong></p>
+            <p>Avoid adding long Paragraphs.</p>
+            <p><strong>5. Brief Internship Details</strong></p>
+            <p>Provide only 1-2 lines for internships; highlight essential skills and contributions.</p>
+            <p><strong>6. No Photographs/ Profile Photo</strong></p>
+
+        </div>
+
+        <!-- Do's Section -->
+        <div class="docolumn">
+            <h2 class="dos">Do’s</h2>
+            <p><strong>1. Font Size and Font Style</strong></p>
+            <p>Use a standard font size of 11 or 12 for readability and fonts like Times New Roman or Calibri for a clean look.</p>
+            <p><strong>2. Use Bullet Points</strong></p>
+            <p>Present information in bullet points for clarity and easy scanning.</p>
+            <p><strong>3. Equal Spacing</strong></p>
+            <p>Ensure consistent spacing throughout the resume for a well-organized layout.</p>
+            <p><strong>4. Quantify Content</strong></p>
+            <p>Include numbers and measurable achievements (e.g., "Managed a team of 5" or "Increased sales by 15%").</p>
+            <p><strong>5. Use Reverse Chronological Order</strong></p>
+            <p>List experiences starting with the most recent to highlight recent accomplishments.</p>
+        </div>
+    </div>
+
+    <div class="boxcontainer">
+        <h2 class="dos">Resume Templates</h2>
+
+        <div class="box">
+            <a href="https://www.overleaf.com/4992497549dvxmnnydyqyb#24496c">Resume Template 1</a>
+        </div>
+
+        <div class="box">
+            <a href="https://www.overleaf.com/latex/templates/academic-cv-template/gmyytjmdbvdm">Resume Template 2</a>
+        </div>
+
+        <div class="box">
+            <a href="https://www.overleaf.com/latex/templates/asu-resume-template/jtwpddspxjtm">Resume Template 2</a>
+        </div>
+    </div>
+</body>
+</html>

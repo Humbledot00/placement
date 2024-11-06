@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+            font-size: 28px;
+        }
+
+        .resources-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 30px; /* Increase the gap between items */
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .resource {
+            background-color: #007bff;
+            padding: 30px; /* Increased padding */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resource a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px; /* Increased font size */
+            font-weight: bold;
+            display: block;
+        }
+
+        .resource a:hover {
+            text-decoration: underline;
+        }
+
+        .resource:hover {
+            transform: translateY(-10px); /* Hover effect to lift the box */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive Design: Stack items on smaller screens */
+        @media (max-width: 768px) {
+            .resources-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .resources-container {
+                grid-template-columns: 1fr; /* 1 column for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Resources</h2>
+
+    <div class="resources-container" id="resources-container">
+        <!-- Resource links will be populated here by JavaScript -->
+    </div>
+
+    <script>
+        // Array of resources with names and links
+        const resources = [
+            { name: 'DSA Roadmap', url: 'https://www.propeers.in/roadmaps/657d83e7cc66959a2168f16e?mcp_token=eyJwaWQiOjEyNjg4NTIsInNpZCI6NTEwMjM0NTkwLCJheCI6IjU5Y2I0MGVlNjdmYzhkNDMwY2Q5N2FlMzc4ZDE3MmI5IiwidHMiOjE3MjI3NzY4MjgsImV4cCI6MTcyNTE5NjAyOH0.iYfT2Zh5DxYUxslBngRU7ocHp-3CO4LJZh2WB2MLyEg' },
+            { name: 'Google DSA course', url: 'https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/' },
+            { name: 'TR & HR Preparation', url: 'https://drive.google.com/open?id=1jkLdSlyv-zAx3a8G-EZ38eXQV_AGjci4' },
+            { name: 'Placement material', url: 'https://drive.google.com/drive/mobile/folders/1SkCOcAS0Kqvuz-MJkkjbFr1GSue6Ms6m' },
+            { name: 'Technical Round', url: 'https://www.scribd.com/document/455077736/Programming-Questions-for-FCA' },
+            { name: 'SQL Leetcode', url: 'https://leetcode.com/problem-list/ok8ycdph/?fbclid=PAZXh0bgNhZW0CMTEAAab5Fgveil2nQeGH7BN3JJJU0rYQ-qiRIRoIulhlA8qgUGByIUJ3h1lCJ6w_aem_hnDIvyaDTOeGgGHNa8Ruww' },
+            { name: 'TCS ', url: 'https://drive.google.com/open?id=1XN8w1Q9akk1IagpaSPDKVowlVCQJ1tV8' },
+            { name: 'CTS ', url: 'https://drive.google.com/open?id=1a-HWjvdfAb4t3xo0O_R8_kwlqGs6Ipt-' },
+            { name: 'TECH MAHINDRA ', url: 'https://drive.google.com/open?id=1ltJ4CSu-6rSCOgjLKtFC6LIwfVej5NXl' },
+            { name: 'TEK SYSTEMS ', url: 'https://drive.google.com/open?id=1wsJFR1RNpzcDWcecYkx7Ke5EtvUa3b7i' },
+            { name: 'WIPRO ', url: 'https://drive.google.com/open?id=15WDPKzntkQ0ux1-qXZhQ6MQ-IjSgYZWE' },
+            { name: 'INFOSYS ', url: 'https://drive.google.com/open?id=1A0so4BGzkynu4k9T0hl-c6yokMBlMQiF' },
+            { name: 'MINDTREE ', url: 'https://drive.google.com/open?id=1dkBNs61BGmaQ8bvMDMlNO2ENDtCcNSdp' },
+            { name: 'MINDTREE', url: 'https://drive.google.com/open?id=1dkBNs61BGmaQ8bvMDMlNO2ENDtCcNSdp' },
+            { name: 'VALUE LABS', url: 'https://drive.google.com/open?id=1MC6LwK5zoTIDkmjZHgm2TxnHPGxGnrHJ' },
+            { name: 'MPHASIS', url: 'https://drive.google.com/open?id=1s4ExADXgIicpTaNjLj5Et6yv4UaPqXaT' },
+            { name: 'ZENQ', url: 'https://drive.google.com/open?id=1FjZxLhhMSNhnkru1pZEGjD1-w8XJPTZQ' },
+            { name: 'EPAM', url: 'https://drive.google.com/open?id=14kYwuvk3DiCp_c67Qhdm5j8MQ9ctPmRm' },
+            { name: 'ELITMUS', url: 'https://drive.google.com/open?id=154gp-J7a43zDe2lwvwZPQ0uvEnU7SYF1' },
+            { name: 'TALENT BATTLE', url: 'https://drive.google.com/open?id=1wIUuyPIS41jKHTrA_1RyMX1hBNWJ0TFS' },
+            { name: 'Sample C Programs', url: 'https://drive.google.com/drive/u/3/folders/1pO69Sp5N3sSKCD2GeMKUvmiOQPxQDAhU?usp=gmail' },
+            { name: 'RS AGARWAL', url: 'https://drive.google.com/open?id=1nq4YFOp4zFrLu0zj8uIV8u3DZfVMRQyp' },
+            
+            { name: 'Infosys Guide', url: 'https://drive.google.com/file/d/1rxm3EAJABs7gBybUvL3hQObq7ZQWdEa5/view?usp=sharing' },
+            { name: 'Wipro Interview ', url: 'https://docs.google.com/document/d/1mM_r4XOXV3llJIX12bE0UIDam-kdVBwbzF90piisckY/edit?usp=sharing' },
+            { name: 'TCS NQT Prep', url: 'https://www.youtube.com/playlist?list=PLVdoaEL574VDryKdOFjfOP3jcMWUYyGUH' },
+
+        ];
+
+        // Get the container where the links will be added
+        const container = document.getElementById('resources-container');
+
+        // Loop through the array and generate the HTML for each resource
+        resources.forEach(resource => {
+            const resourceDiv = document.createElement('div');
+            resourceDiv.classList.add('resource');
+
+            const resourceLink = document.createElement('a');
+            resourceLink.href = resource.url;
+            resourceLink.target = '_blank';  // Open the link in a new tab
+            resourceLink.textContent = resource.name;
+
+            resourceDiv.appendChild(resourceLink);
+            container.appendChild(resourceDiv);
+        });
+    </script>
+</body>
+</html>
